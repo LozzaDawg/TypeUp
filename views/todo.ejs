@@ -2,11 +2,13 @@
 
   <head>
     <title>Type Up</title>
+    <link rel="icon" href="/assets/logo3.png">
     <script
       src="https://code.jquery.com/jquery-1.12.4.js"
       integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
       crossorigin="anonymous"></script>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Teko" rel="stylesheet">
     <script src="/assets/nav-bar.js"></script>
     <script src="/assets/todo-list.js"></script>
   </head>
@@ -14,7 +16,7 @@
   <body>
 
     <nav id="nav-bar">
-      <a href="#" id="nav-toggle-btn"></a>
+      <div id="nav-toggle-btn"><a href="#" id="nav-toggle-btn-logo"></a></div>
       <ul>
         <li><a href="/home">Home</a></li>
         <li><a href="/profile">Profile</a></li>
@@ -23,10 +25,20 @@
       </ul>
     </nav>
 
-    <div id="todo-table" class="moving-content">
-      <h1>Writing Tasks</h1>
+    <div class="moving-content" id="header-div">
+      <h1>Type Up</h1>
+      <nav>
+        <ul>
+          <li><a href="/auth/login" id="login">Login</a></li>
+          <li><a href="/auth/login" id="login">Logout</a></li>
+          <li><a href="/auth/login" id="login">Google</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="moving-content content" id="todo-table">
       <form>
-        <input type="text" name="item" placeholder="add new item" required />
+        <input type="text" name="item" placeholder="New Item" required />
         <button type="submit">Add Item</button>
       </form>
       <ul>

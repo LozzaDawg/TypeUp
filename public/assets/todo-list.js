@@ -14,12 +14,10 @@ $(document).ready(function(){
           location.reload();
         }
       });
-
       return false;
-
   });
 
-  $('.todo-list-item').on('click', function(){ 
+  $('.todo-list-item').on('click', function(){
       var item = $(this).text().replace(/ /g, "-");
       $.ajax({
         type: 'DELETE',
